@@ -1,0 +1,25 @@
+{
+  "name": "axios-reqres.in",
+  "version": "1.0.0",
+  "description": "A repository which contains testing of various API of the website https://reqres.in using axios library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hasanazeerkhan/axios-reqres.in.git"
+  },
+  "keywords": [
+    "axios"
+  ],
+  "author": "Mohammed Hasan",
+  "license": "ISC",
+  "devDependencies": {
+    "axios": "^1.7.9"
+  },
+  "bugs": {
+    "url": "https://github.com/hasanazeerkhan/axios-reqres.in/issues"
+  },
+  "homepage": "https://github.com/hasanazeerkhan/axios-reqres.in#readme"
+}
