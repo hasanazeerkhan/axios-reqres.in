@@ -1,3 +1,4 @@
-import { apiTest } from "./function.js";
+import { testResponseCode } from "./function.js";
 
-apiTest.axiosGet("/api/users/2", 200);
+testResponseCode.get("/api/users/2", 200);
+testResponseCode.delete("/api/users/2", 204);

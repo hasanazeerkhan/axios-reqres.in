@@ -1,7 +1,7 @@
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 import axios from 'axios';
 
-export const apiTest = {
+export const testResponseCode = {
     baseUrl: "https://reqres.in",
     validateResponse(expected, observed) {
         try {
@@ -14,32 +14,32 @@ export const apiTest = {
             console.error(error);
         }
     },
-    async axiosGet(requestURL, expectedResponseCode) {
-        const response = await axios.get(apiTest.baseUrl + requestURL);
-        apiTest.validateResponse(expectedResponseCode, response.status);       
+    async get(requestURL, expectedResponseCode) {
+        const response = await axios.get(testResponseCode.baseUrl + requestURL);
+        testResponseCode.validateResponse(expectedResponseCode, response.status);       
     },
 
-    async axiosPost(requestURL, expectedResponseCode, requestBody) {
-        response = await axios.post(apiTest.baseUrl + requestURL, requestBody);
-        apiTest.validateResponse(expectedResponseCode, response.status);
-
-    },
-
-    async axiosPut(requestURL, expectedResponseCode, requestBody) {
-        response = await axios.put(apiTest.baseUrl + requestURL, requestBody);
-        apiTest.validateResponse(expectedResponseCode, response.status);
+    async post(requestURL, expectedResponseCode) {
+        const response = await axios.post(testResponseCode.baseUrl + requestURL, requestBody);
+        testResponseCode.validateResponse(expectedResponseCode, response.status);
 
     },
 
-    async axiosPatch(requestURL, expectedResponseCode, requestBody) {
-        response = await axios.patch(apiTest.baseUrl + requestURL, requestBody);
-        apiTest.validateResponse(expectedResponseCode, response.status);
+    async put(requestURL, expectedResponseCode) {
+        const response = await axios.put(testResponseCode.baseUrl + requestURL, requestBody);
+        testResponseCode.validateResponse(expectedResponseCode, response.status);
 
     },
 
-    async axiosDelete(requestURL, expectedResponseCode,) {
-        response = await axios.delete(apiTest.baseUrl + requestURL);
-        apiTest.validateResponse(expectedResponseCode, response.status);
+    async patch(requestURL, expectedResponseCode) {
+        const response = await axios.patch(testResponseCode.baseUrl + requestURL, requestBody);
+        testResponseCode.validateResponse(expectedResponseCode, response.status);
+
+    },
+
+    async delete(requestURL, expectedResponseCode) {
+        const response = await axios.delete(testResponseCode.baseUrl + requestURL);
+        testResponseCode.validateResponse(expectedResponseCode, response.status);
 
     },
 
