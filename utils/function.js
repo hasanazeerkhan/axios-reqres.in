@@ -3,13 +3,13 @@ import axios from 'axios';
 const baseURL = "https://reqres.in"
 
 class support {
-    constructor() {
-    }
+  constructor() {
+  }
 
-      async print(requestURL){
-        console.log("-----------------------------------");
-        console.log(`Validating: ${baseURL + requestURL}`);
-      }
+  async print(requestURL) {
+    console.log("-----------------------------------");
+    console.log(`Validating: ${baseURL + requestURL}`);
+  }
 }
 
 export default support;

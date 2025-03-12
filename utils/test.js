@@ -3,7 +3,7 @@ import axios from "axios";
 const baseURL = "https://reqres.in";
 
 class test {
-  constructor() {}
+  constructor() { }
 
   async response(expected, observed) {
     try {
@@ -62,15 +62,15 @@ class test {
     const isValidCreatedAt =
       typeof response.createdAt === "string" ? true : false;
 
-    if(typeOfVerification === "create"){
+    if (typeOfVerification === "create") {
 
-    isValidName && isValidJob && isValidId && isValidCreatedAt === true
-      ? console.log("✅ Valid response")
-      : console.log("🥲 Invalid response");
-    } else if (typeOfVerification === "create"){
+      isValidName && isValidJob && isValidId && isValidCreatedAt === true
+        ? console.log("✅ Valid response")
+        : console.log("🥲 Invalid response");
+    } else if (typeOfVerification === "create") {
       isValidName && isValidJob && isValidId === true
-      ? console.log("✅ Valid response")
-      : console.log("🥲 Invalid response");
+        ? console.log("✅ Valid response")
+        : console.log("🥲 Invalid response");
     } else console.log("🤦‍♂️ Invalid input");
 
   }

@@ -1,5 +1,5 @@
-import {usersAPI} from '../src/users.js' 
-import {userCreate , userUpdatePut, userUpdatePatch} from '../data/data.js';
+import { usersAPI } from '../src/users.js'
+import { userCreate, userUpdatePut, userUpdatePatch } from '../data/data.js';
 
 const users = new usersAPI;
 users.userCreate("/api/users", userCreate);
